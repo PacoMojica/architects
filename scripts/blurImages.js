@@ -2,7 +2,7 @@ const sharp = require('sharp');
 const fs = require('fs');
 const path = require('path');
 
-
+const deviceSizes = [640, 750, 828, 1080, 1200, 1920, 2048, 3840];
 const validExts = ['.png', '.jpg', '.jpeg'];
 const folders = ['./public'];
 const files = [];
@@ -22,29 +22,28 @@ async function generate() {
   }
 
   for (let file of files) {
-    // if (file.name.includes('-blur')) continue;
-    if (file.name.includes('-blur')) {
-      console.log('asdf')
-      fs.unlinkSync(path.join(file.path, file.name));
-    };
+    if (
+      file.name.includes('-blur') ||
+      deviceSizes.some(size => file.name.includes(`-${size}`))
+    ) continue;
 
-    // const url = path.join(file.path, file.name);
-    // const rawExt = path.extname(file.name);
-    // const ext = rawExt.includes('png') ? '.jpg' : rawExt;
-    // const outName = path.join(file.path, file.name.replace(rawExt, `-blur${ext}`));
+    const url = path.join(file.path, file.name);
+    const rawExt = path.extname(file.name);
+    const ext = rawExt.includes('png') ? '.jpg' : rawExt;
+    const outName = path.join(file.path, file.name.replace(rawExt, `-blur${ext}`));
 
-    // try {
-    //   const result = await sharp(url)
-    //     .blur(10)
-    //     .resize({ width: 640 })
-    //     .toFile(outName);
+    try {
+      const result = await sharp(url)
+        .blur(10)
+        .resize({ width: 640 })
+        .toFile(outName);
 
-    //   console.log(result);
-    // } catch (e) {
-    //   console.log(file);
-    //   console.log(outName);
-    //   throw e;
-    // }
+      console.log(result);
+    } catch (e) {
+      console.log(file);
+      console.log(outName);
+      throw e;
+    }
   }
 }
 
