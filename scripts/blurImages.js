@@ -34,8 +34,8 @@ async function generate() {
 
     try {
       const result = await sharp(url)
-        .blur(10)
-        .resize({ width: 640 })
+        .blur(1)
+        .resize({ width: 10 })
         .toFile(outName);
 
       console.log(result);

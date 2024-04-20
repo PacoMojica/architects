@@ -20,6 +20,8 @@ function Compare() {
       >
         <Image
           src="/compare/download.jpg"
+          blurDataURL="/compare/download-blur.jpg"
+          placeholder="blur"
           alt="drawing"
           width={828}
           height={551}
@@ -28,6 +30,8 @@ function Compare() {
         />
         <Image
           src="/compare/pexels-binyamin-mellish-106399.jpg"
+          blurDataURL="/compare/pexels-binyamin-mellish-106399-blur.jpg"
+          placeholder="blur"
           alt="real"
           width={5408}
           height={3605}

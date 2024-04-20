@@ -31,6 +31,8 @@ async function Page({ params }: PageProps) {
       <section className="relative h-screen w-screen">
         <Image
           src={project.cover}
+          blurDataURL={project.cover.replace(".", "-blur.")}
+          placeholder="blur"
           alt={`${name} cover`}
           width={project.coverWidth}
           height={project.coverHeight}
@@ -99,6 +101,8 @@ async function Page({ params }: PageProps) {
         <figure className="relative h-[720px] w-full overflow-hidden">
           <Image
             src="/project/pexels-aleksandar-pasaric-1758672.jpg"
+            blurDataURL="/project/pexels-aleksandar-pasaric-1758672-blur.jpg"
+            placeholder="blur"
             width={5967}
             height={3978}
             alt="pexels-aleksandar-pasaric-1758672.jpg"
@@ -159,6 +163,8 @@ async function Page({ params }: PageProps) {
             <figure className="relative h-full w-full overflow-hidden">
               <Image
                 src="/project/pexels-jean-van-der-meulen-1457844.jpg"
+                blurDataURL="/project/pexels-jean-van-der-meulen-1457844-blur.jpg"
+                placeholder="blur"
                 width={2912}
                 height={4368}
                 alt="pexels-aleksandar-pasaric-1758672.jpg"
@@ -264,6 +270,8 @@ async function Page({ params }: PageProps) {
             <figure className="relative w-full overflow-hidden">
               <Image
                 src="/project/pexels-life-of-pix-14613.jpg"
+                blurDataURL="/project/pexels-life-of-pix-14613-blur.jpg"
+                placeholder="blur"
                 width={4126}
                 height={2848}
                 alt="pexels-aleksandar-pasaric-1758672.jpg"
@@ -280,6 +288,8 @@ async function Page({ params }: PageProps) {
             <figure className="relative w-full overflow-hidden">
               <Image
                 src="/project/pexels-igor-starkov-1117452.jpg"
+                blurDataURL="/project/pexels-igor-starkov-1117452-blur.jpg"
+                placeholder="blur"
                 width={3409}
                 height={2482}
                 alt="pexels-aleksandar-pasaric-1758672.jpg"
@@ -296,6 +306,8 @@ async function Page({ params }: PageProps) {
         <figure className="relative h-[720px] w-full overflow-hidden pt-8">
           <Image
             src="/project/pexels-pixabay-258160.jpg"
+            blurDataURL="/project/pexels-pixabay-258160-blur.jpg"
+            placeholder="blur"
             width={4608}
             height={3456}
             alt="pexels-aleksandar-pasaric-1758672.jpg"
@@ -351,6 +363,8 @@ async function Page({ params }: PageProps) {
             <figure className="relative h-full w-full overflow-hidden">
               <Image
                 src="/project/pexels-pixabay-210158.jpg"
+                blurDataURL="/project/pexels-pixabay-210158-blur.jpg"
+                placeholder="blur"
                 width={5776}
                 height={3826}
                 alt="pexels-aleksandar-pasaric-1758672.jpg"
@@ -366,6 +380,8 @@ async function Page({ params }: PageProps) {
         <figure className="relative h-[720px] w-full overflow-hidden pt-8">
           <Image
             src="/project/pexels-photo-1633970.jpeg"
+            blurDataURL="/project/pexels-photo-1633970-blur.jpeg"
+            placeholder="blur"
             width={5797}
             height={3724}
             alt="pexels-aleksandar-pasaric-1758672.jpg"

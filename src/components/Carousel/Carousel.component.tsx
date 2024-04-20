@@ -95,6 +95,8 @@ function Carousel() {
         >
           <Image
             src={firstSlide.src}
+            blurDataURL={firstSlide.src.replace(".", "-blur.")}
+            placeholder="blur"
             alt="Slider 1"
             sizes="50vw"
             width={firstSlide.width}
@@ -105,6 +107,8 @@ function Carousel() {
         <div ref={second} className="absolute top-0 h-full w-full">
           <Image
             src={secondSlide.src}
+            blurDataURL={secondSlide.src.replace(".", "-blur.")}
+            placeholder="blur"
             alt="Slider 2"
             sizes="50vw"
             width={secondSlide.width}
@@ -118,6 +122,8 @@ function Carousel() {
         >
           <Image
             src={currentSlide.src}
+            blurDataURL={currentSlide.src.replace(".", "-blur.")}
+            placeholder="blur"
             alt="Slider Parallax"
             sizes="50vw"
             width={currentSlide.width}

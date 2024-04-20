@@ -24,6 +24,8 @@ export default function Home() {
         <section className="flex w-full gap-2">
           <Image
             src="/images/pexels-gdtography-911758.jpg"
+            blurDataURL="/images/pexels-gdtography-911758-blur.jpg"
+            placeholder="blur"
             alt="Proyect 1"
             className="h-auto w-1/2"
             width={6016}
@@ -33,6 +35,8 @@ export default function Home() {
           />
           <Image
             src="/images/pexels-gdtography-911738.jpg"
+            blurDataURL="/images/pexels-gdtography-911738-blur.jpg"
+            placeholder="blur"
             alt="Proyect 2"
             className="h-auto w-1/2"
             width={6016}
@@ -44,7 +48,7 @@ export default function Home() {
         <Divider />
       </div>
       {/* <div ref={contact} className="relative h-96 w-full overflow-hidden"> */}
-      <div className="relative h-96 w-full overflow-hidden mt-20">
+      <div className="relative mt-20 h-96 w-full overflow-hidden">
         <div className="absolute z-10 flex h-full w-full items-center justify-center bg-zinc-900/35 backdrop-blur-sm">
           <Link
             className="block w-max select-none border-2 border-zinc-100 bg-zinc-700 bg-opacity-75 px-20 py-6 text-center font-sans text-sm font-extralight uppercase leading-tight tracking-tight text-zinc-100 duration-500 hover:bg-zinc-100 hover:bg-opacity-100 hover:text-zinc-700"
@@ -55,6 +59,8 @@ export default function Home() {
         </div>
         <Image
           src="/images/pexels-alex-staudinger-1732414.jpg"
+          blurDataURL="/images/pexels-alex-staudinger-1732414-blur.jpg"
+          placeholder="blur"
           alt="Contact"
           fill
           sizes="50vw"

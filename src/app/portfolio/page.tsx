@@ -17,6 +17,8 @@ function Page() {
             >
               <Image
                 src={src}
+                blurDataURL={src.replace('.', '-blur.')}
+                placeholder="blur"
                 alt={src}
                 fill
                 sizes="50vw"
