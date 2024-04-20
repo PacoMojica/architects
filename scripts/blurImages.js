@@ -22,8 +22,9 @@ async function generate() {
   }
 
   for (let file of files) {
-    if (file.name.includes('-blur')) continue;
+    // if (file.name.includes('-blur')) continue;
     if (file.name.includes('-blur')) {
+      console.log('asdf')
       fs.unlinkSync(path.join(file.path, file.name));
     };
 
