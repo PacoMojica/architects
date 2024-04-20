@@ -19,11 +19,12 @@ function Compare() {
         className="relative mb-20 h-screen w-full overflow-hidden"
       >
         <Image
-          src="/compare/download.png"
+          src="/compare/download.jpg"
           alt="drawing"
-          width={985}
-          height={656}
+          width={828}
+          height={551}
           className="absolute h-auto w-full"
+          sizes="50vw"
         />
         <Image
           src="/compare/pexels-binyamin-mellish-106399.jpg"
@@ -32,6 +33,7 @@ function Compare() {
           height={3605}
           className="absolute h-auto w-full"
           style={{ clipPath }}
+          sizes="50vw"
         />
       </div>
     </section>

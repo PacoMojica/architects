@@ -19,6 +19,7 @@ function Page() {
                 src={src}
                 alt={src}
                 fill
+                sizes="50vw"
                 className={`${i % 2 === 0 ? "animate-fromBottom" : "animate-fromTop"} -z-10 object-cover brightness-90 duration-500 group-hover:brightness-50`}
               />
               {label}

@@ -28,6 +28,7 @@ export default function Home() {
             className="h-auto w-1/2"
             width={6016}
             height={4016}
+            sizes="50vw"
             // ref={left}
           />
           <Image
@@ -36,13 +37,14 @@ export default function Home() {
             className="h-auto w-1/2"
             width={6016}
             height={4016}
+            sizes="50vw"
             // ref={right}
           />
         </section>
         <Divider />
       </div>
       {/* <div ref={contact} className="relative h-96 w-full overflow-hidden"> */}
-      <div className="relative h-96 w-full overflow-hidden">
+      <div className="relative h-96 w-full overflow-hidden mt-20">
         <div className="absolute z-10 flex h-full w-full items-center justify-center bg-zinc-900/35 backdrop-blur-sm">
           <Link
             className="block w-max select-none border-2 border-zinc-100 bg-zinc-700 bg-opacity-75 px-20 py-6 text-center font-sans text-sm font-extralight uppercase leading-tight tracking-tight text-zinc-100 duration-500 hover:bg-zinc-100 hover:bg-opacity-100 hover:text-zinc-700"
@@ -55,6 +57,7 @@ export default function Home() {
           src="/images/pexels-alex-staudinger-1732414.jpg"
           alt="Contact"
           fill
+          sizes="50vw"
           className="object-cover"
         />
       </div>

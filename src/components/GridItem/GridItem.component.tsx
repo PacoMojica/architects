@@ -28,6 +28,7 @@ function GridItem({ name, cover, coverWidth, coverHeight }: ItemProps) {
           className="absolute -z-10 h-full w-full object-cover brightness-90 duration-500 group-hover:scale-105 group-hover:brightness-100"
           width={coverWidth}
           height={coverHeight}
+          sizes="33vw"
         />
         <span className="w-full bg-zinc-800/60 px-4 py-2 text-zinc-100 duration-500 group-hover:bg-zinc-800 group-hover:py-3">
           {name}

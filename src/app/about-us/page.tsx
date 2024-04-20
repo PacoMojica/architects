@@ -11,9 +11,8 @@ function Page() {
         <Image
           src="/project/pexels-tirachard-kumtanom-347141.jpg"
           alt="about us"
-          sizes="100vw"
-          width={2992}
-          height={2000}
+          sizes="50vw"
+          fill
           className="h-full object-cover"
         />
         <h1 className="absolute bottom-36 left-20 text-6xl text-zinc-50 drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.8)]">
@@ -60,6 +59,7 @@ function Page() {
                 height={2286}
                 alt="pexels-aleksandar-pasaric-1758672.jpg"
                 className="h-full w-auto object-cover"
+                sizes="50vw"
               />
             </div>
           </div>
@@ -150,6 +150,7 @@ function Page() {
                 height={4000}
                 alt="pexels-aleksandar-pasaric-1758672.jpg"
                 className="h-full w-auto object-cover"
+                sizes="50vw"
               />
             </div>
           </div>
@@ -164,6 +165,7 @@ function Page() {
                 height={1080}
                 alt="pexels-aleksandar-pasaric-1758672.jpg"
                 className="h-full w-auto object-cover"
+                sizes="50vw"
               />
             </div>
           </div>
@@ -217,6 +219,7 @@ function Page() {
                 className="absolute -z-10 h-full w-full object-cover brightness-90 duration-500 group-hover:scale-105 group-hover:brightness-100"
                 width={coverWidth}
                 height={coverHeight}
+                sizes="33vw"
               />
               <span className="w-full bg-zinc-800/60 px-4 py-2 text-zinc-100 duration-500 group-hover:bg-zinc-800 group-hover:py-3">
                 {name}

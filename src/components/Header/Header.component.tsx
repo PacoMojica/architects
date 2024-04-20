@@ -29,6 +29,7 @@ function Header() {
             alt="Mojica Bricks"
             fill
             priority
+            unoptimized
           />
         </a>
       </div>

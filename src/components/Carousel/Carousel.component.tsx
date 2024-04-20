@@ -96,6 +96,7 @@ function Carousel() {
           <Image
             src={firstSlide.src}
             alt="Slider 1"
+            sizes="50vw"
             width={firstSlide.width}
             height={firstSlide.height}
             className="h-full origin-right scale-[125%] object-cover"
@@ -104,7 +105,8 @@ function Carousel() {
         <div ref={second} className="absolute top-0 h-full w-full">
           <Image
             src={secondSlide.src}
-            alt="Slider 1"
+            alt="Slider 2"
+            sizes="50vw"
             width={secondSlide.width}
             height={secondSlide.height}
             className="h-full origin-right scale-[125%] object-cover"
@@ -116,7 +118,8 @@ function Carousel() {
         >
           <Image
             src={currentSlide.src}
-            alt="Slider 1"
+            alt="Slider Parallax"
+            sizes="50vw"
             width={currentSlide.width}
             height={currentSlide.height}
             className="h-full w-auto origin-left scale-[125%] object-cover brightness-[45%]"

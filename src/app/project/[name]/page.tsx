@@ -35,6 +35,7 @@ async function Page({ params }: PageProps) {
           width={project.coverWidth}
           height={project.coverHeight}
           className="h-full object-cover"
+          sizes="50vw"
         />
         <h1 className="absolute bottom-36 left-20 text-6xl text-zinc-50 drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.4)]">
           {project.name}
@@ -102,6 +103,7 @@ async function Page({ params }: PageProps) {
             height={3978}
             alt="pexels-aleksandar-pasaric-1758672.jpg"
             className="h-auto w-full"
+            sizes="50vw"
           />
           <figcaption className="absolute bottom-0 left-0 w-full bg-white py-4 text-sm">
             Laudantium dolor expedita mollitia libero! Vitae cumque recusandae
@@ -161,6 +163,7 @@ async function Page({ params }: PageProps) {
                 height={4368}
                 alt="pexels-aleksandar-pasaric-1758672.jpg"
                 className="h-auto w-full"
+                sizes="50vw"
               />
               <figcaption className="absolute bottom-0 left-0 w-full bg-white py-4 text-sm">
                 Sauscipit, porro. Impedit, quos laudantium similique sit
@@ -265,6 +268,7 @@ async function Page({ params }: PageProps) {
                 height={2848}
                 alt="pexels-aleksandar-pasaric-1758672.jpg"
                 className="h-auto w-full"
+                sizes="50vw"
               />
               <figcaption className="absolute bottom-0 left-0 w-full bg-white py-4 text-sm">
                 Deleniti consequuntur, harum laudantium quo asperiores
@@ -280,6 +284,7 @@ async function Page({ params }: PageProps) {
                 height={2482}
                 alt="pexels-aleksandar-pasaric-1758672.jpg"
                 className="h-auto w-full"
+                sizes="50vw"
               />
               <figcaption className="absolute bottom-0 left-0 w-full bg-white py-4 text-sm">
                 Voluptates, eveniet. Animi ad atque molestiae tempora iusto
@@ -295,6 +300,7 @@ async function Page({ params }: PageProps) {
             height={3456}
             alt="pexels-aleksandar-pasaric-1758672.jpg"
             className="h-auto w-full"
+            sizes="50vw"
           />
           <figcaption className="absolute bottom-0 left-0 w-full bg-white py-4 text-sm">
             Ipsum maiores possimus repudiandae aperiam modi laudantium qui
@@ -349,6 +355,7 @@ async function Page({ params }: PageProps) {
                 height={3826}
                 alt="pexels-aleksandar-pasaric-1758672.jpg"
                 className="h-full w-auto object-cover"
+                sizes="50vw"
               />
               <figcaption className="absolute bottom-0 left-0 w-full bg-white py-4 text-sm">
                 Libero maxime ab eaque aliquid quam quis
@@ -363,6 +370,7 @@ async function Page({ params }: PageProps) {
             height={3724}
             alt="pexels-aleksandar-pasaric-1758672.jpg"
             className="h-auto w-full"
+            sizes="50vw"
           />
           <figcaption className="absolute bottom-0 left-0 w-full bg-white py-4 text-sm">
             Quaerat saepe iusto molestiae officia, praesentium, dignissimos

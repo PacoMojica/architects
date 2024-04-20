@@ -17,6 +17,7 @@ function Link({ href, src, alt }: LinkProps) {
           alt={alt}
           width={FOOTER_ICON_SIZE}
           height={FOOTER_ICON_SIZE}
+          unoptimized
         />
       </NLink>
     </li>

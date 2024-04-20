@@ -3,9 +3,9 @@ import Title from "@/components/Title";
 
 function Page() {
   return (
-    <main className="px-12">
+    <main className="px-12 pb-20">
       <Title>Contact</Title>
-      <section className="flex h-max min-h-96 w-full flex-wrap gap-4 pb-20">
+      <section className="flex h-full min-h-96 w-full flex-wrap gap-4 items-center">
         <div className="h-max w-[30%] flex-grow">
           <Map
             highlight="MX-JAL"

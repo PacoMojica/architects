@@ -35,7 +35,7 @@ export const GRID_CATEGORIES = [
 export const PROJECTS = [
   {
     name: 'Zeus',
-    cover: '/projects/zeus/pexels-anthony-macajone-1874636.jpg',
+    cover: '/projects/zeus/pexels-pixabay-161758.jpg',
     coverWidth: 4480,
     coverHeight: 5600,
     images: [],
