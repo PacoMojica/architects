@@ -5,7 +5,7 @@ import { PROJECT_COVERS } from "@/utils/constants";
 function Page() {
   return (
     <main className="h-screen w-screen">
-      <div className="relative flex h-full w-full items-center justify-between">
+      <div className="relative flex h-full w-full flex-col items-center justify-between lg:flex-row">
         {PROJECT_COVERS.map(({ label, src }, i) => (
           <div
             key={`project-category-${label}`}
@@ -17,12 +17,12 @@ function Page() {
             >
               <Image
                 src={src}
-                blurDataURL={src.replace('.', '-blur.')}
+                blurDataURL={src.replace(".", "-blur.")}
                 placeholder="blur"
                 alt={src}
                 fill
                 sizes="50vw"
-                className={`${i % 2 === 0 ? "animate-fromBottom" : "animate-fromTop"} -z-10 object-cover brightness-90 duration-500 group-hover:brightness-50`}
+                className={`${i % 2 === 0 ? "animate-fromLeft lg:animate-fromBottom" : "animate-fromRight lg:animate-fromTop"} -z-10 object-cover brightness-90 duration-500 group-hover:brightness-50`}
               />
               {label}
             </Link>

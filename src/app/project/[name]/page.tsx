@@ -46,9 +46,9 @@ async function Page({ params }: PageProps) {
           Mount Olympus, Greece
         </h2>
       </section>
-      <section className="flex py-12">
-        <div className="w-1/2 px-12 py-8">
-          <div className="grid h-full grid-cols-[auto_1fr] grid-rows-5 items-center px-6 py-4">
+      <section className="flex flex-col py-12 lg:flex-row">
+        <div className="w-full px-12 py-8">
+          <div className="grid items-center gap-2 py-4 md:grid-cols-[auto_1fr] md:grid-rows-5 md:px-6">
             <Body className="bg-zinc-800 px-6 text-center font-bold uppercase text-zinc-50">
               Client
             </Body>
@@ -81,7 +81,7 @@ async function Page({ params }: PageProps) {
             </Body>
           </div>
         </div>
-        <div className="flex w-1/2 flex-col gap-4 px-12 py-8">
+        <div className="flex w-full flex-col gap-4 px-12 py-8">
           <Body indent>{project.description}</Body>
           <Body>
             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Officiis
@@ -98,7 +98,7 @@ async function Page({ params }: PageProps) {
       </section>
       <Divider className="px-12" />
       <section className="px-12 pt-20">
-        <figure className="relative h-[720px] w-full overflow-hidden">
+        <figure className="h-max w-full overflow-hidden">
           <Image
             src="/project/pexels-aleksandar-pasaric-1758672.jpg"
             blurDataURL="/project/pexels-aleksandar-pasaric-1758672-blur.jpg"
@@ -109,14 +109,14 @@ async function Page({ params }: PageProps) {
             className="h-auto w-full"
             sizes="50vw"
           />
-          <figcaption className="absolute bottom-0 left-0 w-full bg-white py-4 text-sm">
+          <figcaption className="w-full bg-white py-4 text-sm">
             Laudantium dolor expedita mollitia libero! Vitae cumque recusandae
             explicabo maiores earum! Est mollitia perspiciatis nulla adipisci
             neque eveniet
           </figcaption>
         </figure>
-        <div className="flex gap-12">
-          <div className="flex w-1/2 flex-col gap-6 py-8">
+        <div className="flex flex-col lg:flex-row lg:gap-12">
+          <div className="flex w-full flex-col gap-6 py-8 lg:w-1/2">
             <Body indent>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum nihil
               porro modi dicta vero impedit id deleniti, cumque sed animi facere
@@ -137,7 +137,7 @@ async function Page({ params }: PageProps) {
               accusantium ratione illum.
             </Body>
           </div>
-          <div className="flex w-1/2 flex-col gap-4 py-8">
+          <div className="flex w-full flex-col gap-4 py-8 lg:w-1/2">
             <Body>
               Sint nostrum praesentium nesciunt illum neque vero repellat
               voluptatum voluptatibus ducimus sit et possimus dicta aut laborum
@@ -158,9 +158,9 @@ async function Page({ params }: PageProps) {
             </Body>
           </div>
         </div>
-        <div className="flex gap-12">
-          <div className="flex w-1/2 flex-col gap-6 pt-8">
-            <figure className="relative h-full w-full overflow-hidden">
+        <div className="flex flex-col lg:flex-row lg:gap-12">
+          <div className="flex flex-col gap-6 pt-8 lg:w-1/2">
+            <figure className="h-full w-full overflow-hidden">
               <Image
                 src="/project/pexels-jean-van-der-meulen-1457844.jpg"
                 blurDataURL="/project/pexels-jean-van-der-meulen-1457844-blur.jpg"
@@ -171,13 +171,13 @@ async function Page({ params }: PageProps) {
                 className="h-auto w-full"
                 sizes="50vw"
               />
-              <figcaption className="absolute bottom-0 left-0 w-full bg-white py-4 text-sm">
+              <figcaption className="w-full bg-white py-4 text-sm">
                 Sauscipit, porro. Impedit, quos laudantium similique sit
                 veritatis
               </figcaption>
             </figure>
           </div>
-          <div className="flex w-1/2 flex-col gap-6 pt-8">
+          <div className="flex flex-col gap-6 pt-8 lg:w-1/2">
             <Body indent>
               Amet totam iste distinctio tenetur, facilis iure exercitationem
               laboriosam dolorem rerum nisi animi repudiandae numquam nam quasi
@@ -207,8 +207,8 @@ async function Page({ params }: PageProps) {
             </Body>
           </div>
         </div>
-        <div className="flex gap-12">
-          <div className="flex w-1/2 flex-col gap-6 py-8">
+        <div className="flex flex-col lg:flex-row lg:gap-12">
+          <div className="flex flex-col gap-6 py-8 lg:w-1/2">
             <Body indent>
               Perferendis, hic corporis deleniti, minima dolorum placeat
               adipisci, tempore quia nostrum eligendi alias dignissimos corrupti
@@ -243,7 +243,7 @@ async function Page({ params }: PageProps) {
               repudiandae cumque.
             </Body>
           </div>
-          <div className="flex w-1/2 flex-col gap-4 py-8">
+          <div className="flex flex-col gap-4 py-8 lg:w-1/2">
             <Body>
               Ea eligendi aperiam eum pariatur libero tempora laboriosam nisi
               amet possimus vero consectetur ipsa odit sunt voluptatum quam rem
@@ -265,9 +265,9 @@ async function Page({ params }: PageProps) {
             </Body>
           </div>
         </div>
-        <div className="flex gap-12">
-          <div className="flex w-1/2 flex-col gap-6 pt-8">
-            <figure className="relative w-full overflow-hidden">
+        <div className="flex flex-col lg:flex-row lg:gap-12">
+          <div className="flex flex-col gap-6 pt-8 lg:w-1/2">
+            <figure className="w-full overflow-hidden">
               <Image
                 src="/project/pexels-life-of-pix-14613.jpg"
                 blurDataURL="/project/pexels-life-of-pix-14613-blur.jpg"
@@ -278,14 +278,14 @@ async function Page({ params }: PageProps) {
                 className="h-auto w-full"
                 sizes="50vw"
               />
-              <figcaption className="absolute bottom-0 left-0 w-full bg-white py-4 text-sm">
+              <figcaption className="w-full bg-white py-4 text-sm">
                 Deleniti consequuntur, harum laudantium quo asperiores
                 necessitatibus architecto
               </figcaption>
             </figure>
           </div>
-          <div className="flex w-1/2 flex-col gap-6 pt-8">
-            <figure className="relative w-full overflow-hidden">
+          <div className="flex flex-col gap-6 pt-8 lg:w-1/2">
+            <figure className="w-full overflow-hidden">
               <Image
                 src="/project/pexels-igor-starkov-1117452.jpg"
                 blurDataURL="/project/pexels-igor-starkov-1117452-blur.jpg"
@@ -296,14 +296,14 @@ async function Page({ params }: PageProps) {
                 className="h-auto w-full"
                 sizes="50vw"
               />
-              <figcaption className="absolute bottom-0 left-0 w-full bg-white py-4 text-sm">
+              <figcaption className="w-full bg-white py-4 text-sm">
                 Voluptates, eveniet. Animi ad atque molestiae tempora iusto
                 dolor magnam consequuntur qui porro non
               </figcaption>
             </figure>
           </div>
         </div>
-        <figure className="relative h-[720px] w-full overflow-hidden pt-8">
+        <figure className="h-max w-full overflow-hidden pt-8">
           <Image
             src="/project/pexels-pixabay-258160.jpg"
             blurDataURL="/project/pexels-pixabay-258160-blur.jpg"
@@ -314,13 +314,13 @@ async function Page({ params }: PageProps) {
             className="h-auto w-full"
             sizes="50vw"
           />
-          <figcaption className="absolute bottom-0 left-0 w-full bg-white py-4 text-sm">
+          <figcaption className="w-full bg-white py-4 text-sm">
             Ipsum maiores possimus repudiandae aperiam modi laudantium qui
             aspernatur suscipit doloremque
           </figcaption>
         </figure>
-        <div className="flex gap-12">
-          <div className="flex w-1/2 flex-col gap-6 pt-8">
+        <div className="flex flex-col lg:flex-row lg:gap-12">
+          <div className="flex flex-col gap-6 pt-8 lg:w-1/2">
             <Body indent>
               Vero libero sapiente modi maxime, ab neque error iste!
               Exercitationem, natus id. Nesciunt labore earum quasi atque.
@@ -359,8 +359,8 @@ async function Page({ params }: PageProps) {
               necessitatibus et voluptatem.
             </Body>
           </div>
-          <div className="flex w-1/2 flex-col gap-6 pt-8">
-            <figure className="relative h-full w-full overflow-hidden">
+          <div className="flex flex-col gap-6 pt-8 lg:w-1/2">
+            <figure className="h-full w-full overflow-hidden">
               <Image
                 src="/project/pexels-pixabay-210158.jpg"
                 blurDataURL="/project/pexels-pixabay-210158-blur.jpg"
@@ -368,16 +368,16 @@ async function Page({ params }: PageProps) {
                 width={5776}
                 height={3826}
                 alt="pexels-aleksandar-pasaric-1758672.jpg"
-                className="h-full w-auto object-cover"
+                className="h-auto w-full object-cover"
                 sizes="50vw"
               />
-              <figcaption className="absolute bottom-0 left-0 w-full bg-white py-4 text-sm">
+              <figcaption className="w-full bg-white py-4 text-sm">
                 Libero maxime ab eaque aliquid quam quis
               </figcaption>
             </figure>
           </div>
         </div>
-        <figure className="relative h-[720px] w-full overflow-hidden pt-8">
+        <figure className="h-max w-full overflow-hidden pt-8">
           <Image
             src="/project/pexels-photo-1633970.jpeg"
             blurDataURL="/project/pexels-photo-1633970-blur.jpeg"
@@ -388,7 +388,7 @@ async function Page({ params }: PageProps) {
             className="h-auto w-full"
             sizes="50vw"
           />
-          <figcaption className="absolute bottom-0 left-0 w-full bg-white py-4 text-sm">
+          <figcaption className="w-full bg-white py-4 text-sm">
             Quaerat saepe iusto molestiae officia, praesentium, dignissimos
             similique laborum reprehenderit, natus odit voluptatibus
           </figcaption>

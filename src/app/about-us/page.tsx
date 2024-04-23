@@ -22,13 +22,13 @@ function Page() {
         </h1>
       </section>
       <section className="px-12 pt-20">
-        <div className="flex gap-12">
-          <div className="flex w-1/2 flex-col gap-6 py-8">
+        <div className="flex flex-col lg:flex-row lg:gap-12">
+          <div className="flex flex-col gap-6 py-8 lg:w-1/2">
             <span className="font-mono text-4xl font-black leading-tight tracking-tight">
               The need you place for the want you life.
             </span>
           </div>
-          <div className="flex w-1/2 flex-col gap-4 py-8">
+          <div className="flex flex-col gap-4 py-8 lg:w-1/2">
             <Body>
               Sint nostrum praesentium nesciunt illum neque vero repellat
               voluptatum voluptatibus ducimus sit et possimus dicta aut laborum
@@ -49,11 +49,11 @@ function Page() {
             </Body>
           </div>
         </div>
-        <Title className="py-20">From Sketch To Reality</Title>
+        <Title className="py-8 lg:py-20">From Sketch To Reality</Title>
         <Compare />
-        <Title className="pt-20">Design Philosophy</Title>
-        <div className="flex gap-12">
-          <div className="flex w-1/2 flex-col gap-6 py-8">
+        <Title className="pt-12">Design Philosophy</Title>
+        <div className="flex flex-col lg:flex-row lg:gap-12">
+          <div className="flex w-full flex-col gap-6 py-8 lg:w-1/2">
             <div className="h-full w-full">
               <Image
                 src="/project/pexels-binyamin-mellish-186077.jpg"
@@ -62,12 +62,12 @@ function Page() {
                 width={3352}
                 height={2286}
                 alt="pexels-aleksandar-pasaric-1758672.jpg"
-                className="h-full w-auto object-cover"
+                className="h-auto w-full object-cover lg:h-full lg:w-auto"
                 sizes="50vw"
               />
             </div>
           </div>
-          <div className="flex w-1/2 flex-col gap-4 py-8">
+          <div className="flex flex-col gap-4 py-8 lg:w-1/2">
             <Body>
               Eum vero aperiam commodi ullam cupiditate possimus vel voluptatem
               ipsum velit labore consectetur libero, illo harum ratione
@@ -113,8 +113,8 @@ function Page() {
           </div>
         </div>
         <Title className="pt-20">Design for the Environment</Title>
-        <div className="flex gap-12">
-          <div className="flex w-1/2 flex-col gap-4 py-8">
+        <div className="flex flex-col lg:flex-row lg:gap-12">
+          <div className="flex flex-col gap-4 py-8 lg:w-1/2">
             <Body>
               Dicta blanditiis nobis cum unde culpa dolor magni facere totam
               expedita nostrum? Impedit, ut. Reiciendis in, animi tempora,
@@ -146,7 +146,7 @@ function Page() {
               aliquam vel odit sed enim quaerat non corporis accusamus.
             </Body>
           </div>
-          <div className="flex w-1/2 flex-col gap-6 py-8">
+          <div className="flex flex-col gap-6 py-8 lg:w-1/2">
             <div className="h-full w-full">
               <Image
                 src="/project/pexels-expect-best-323772.jpg"
@@ -155,15 +155,15 @@ function Page() {
                 width={6000}
                 height={4000}
                 alt="pexels-aleksandar-pasaric-1758672.jpg"
-                className="h-full w-auto object-cover"
+                className="h-auto w-full object-cover lg:h-full lg:w-auto"
                 sizes="50vw"
               />
             </div>
           </div>
         </div>
         <Title className="pt-20">Design for Health & Wellbeing</Title>
-        <div className="flex gap-12">
-          <div className="flex w-1/2 flex-col gap-6 py-8">
+        <div className="flex flex-col lg:flex-row lg:gap-12">
+          <div className="flex flex-col gap-6 py-8 lg:w-1/2">
             <div className="h-full w-full">
               <Image
                 src="/project/pexels-pixabay-276724.jpg"
@@ -172,12 +172,12 @@ function Page() {
                 width={1920}
                 height={1080}
                 alt="pexels-aleksandar-pasaric-1758672.jpg"
-                className="h-full w-auto object-cover"
+                className="h-auto w-full object-cover lg:h-full lg:w-auto"
                 sizes="50vw"
               />
             </div>
           </div>
-          <div className="flex w-1/2 flex-col gap-4 py-8">
+          <div className="flex flex-col gap-4 py-8 lg:w-1/2">
             <Body>
               Similique tenetur quidem magni et tempore, molestias doloremque.
               Fuga molestiae autem, officia mollitia labore animi consequuntur
@@ -218,7 +218,7 @@ function Page() {
         <ul className="flex flex-wrap items-center justify-center gap-2 py-20">
           {TEAM.map(({ cover, coverHeight, coverWidth, name }, i) => (
             <li
-              className="group relative flex h-full w-[32%] items-end justify-start overflow-hidden duration-700 after:block after:pb-[100%] after:content-[''] hover:bg-zinc-900/35"
+              className="group relative flex h-full w-[49%] items-end justify-start overflow-hidden duration-700 after:block after:pb-[100%] after:content-[''] hover:bg-zinc-900/35 lg:w-[32%]"
               key={`team-${i}`}
             >
               <Image

@@ -7,7 +7,7 @@ function Compare() {
   const [percentage, setPercentage] = useState(50);
   const clipPath = `polygon(${percentage}% 0, 100% 0, 100% 100%, ${percentage}% 100%)`;
   return (
-    <section>
+    <section className="w-full">
       <div
         onMouseMove={(e) => {
           const rect = e.currentTarget.getBoundingClientRect();
@@ -16,7 +16,7 @@ function Compare() {
 
           setPercentage(Math.ceil((x / rect.width) * 100));
         }}
-        className="relative mb-20 h-screen w-full overflow-hidden"
+        className="relative h-auto w-full overflow-hidden lg:mb-12 lg:h-screen"
       >
         <Image
           src="/compare/download.jpg"
@@ -25,7 +25,7 @@ function Compare() {
           alt="drawing"
           width={828}
           height={551}
-          className="absolute h-auto w-full"
+          className="h-auto w-full"
           sizes="50vw"
         />
         <Image
@@ -35,7 +35,7 @@ function Compare() {
           alt="real"
           width={5408}
           height={3605}
-          className="absolute h-auto w-full"
+          className="absolute top-0 h-auto w-full"
           style={{ clipPath }}
           sizes="50vw"
         />

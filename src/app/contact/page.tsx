@@ -3,10 +3,10 @@ import Title from "@/components/Title";
 
 function Page() {
   return (
-    <main className="px-12 pb-20">
+    <main className="px-12 pb-20 lg:min-h-screen">
       <Title>Contact</Title>
-      <section className="flex h-full min-h-96 w-full flex-wrap gap-4 items-center">
-        <div className="h-max w-[30%] flex-grow">
+      <section className="flex h-full min-h-96 w-full flex-wrap items-center gap-4">
+        <div className="flex h-max w-full flex-grow flex-col items-center lg:w-[30%] lg:items-start">
           <Map
             highlight="MX-JAL"
             fill="duration-500 fill-sky-500 stroke-2 stroke-zinc-200 group-hover:brightness-125"
@@ -17,7 +17,7 @@ function Page() {
           </p>
           <p className="font-mono tracking-tighter">80030 Zapopan, Jalisco</p>
         </div>
-        <div className="h-max w-[30%] flex-grow">
+        <div className="flex h-max w-full flex-grow flex-col items-center lg:w-[30%] lg:items-start">
           <Map
             highlight="MX-NEL"
             fill="duration-500 fill-sky-500 stroke-2 stroke-zinc-200 group-hover:brightness-125"
@@ -30,7 +30,7 @@ function Page() {
             80090 San Pedro Garza García, Nuevo Leon
           </p>
         </div>
-        <div className="h-max w-[30%] flex-grow">
+        <div className="flex h-max w-full flex-grow flex-col items-center lg:w-[30%] lg:items-start">
           <Map
             highlight="MX-GUA"
             fill="duration-500 fill-sky-500 stroke-2 stroke-zinc-200 group-hover:brightness-125"
