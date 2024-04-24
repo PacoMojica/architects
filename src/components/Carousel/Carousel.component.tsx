@@ -4,7 +4,7 @@ import { usePrevious } from "@/hooks";
 import { bluredDataURLs, SLIDES } from "@/utils/constants";
 import Image from "next/image";
 import Link from "next/link";
-import { useEffect, useRef, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 
 const FRONT_ANIMATIONS = [
   "animate-panRight",
@@ -37,6 +37,7 @@ function Carousel() {
   const prevSlide = SLIDES[prev !== undefined ? prev : 0];
   const firstSlide = front.current ? currentSlide : prevSlide;
   const secondSlide = !front.current ? currentSlide : prevSlide;
+  const auto = useRef<NodeJS.Timeout | null>(null);
 
   const handleBullet = (bullet: number) => () => {
     title.current?.classList.remove(...FADE_ANIMATIONS);
@@ -44,7 +45,32 @@ function Carousel() {
     setCurrent(bullet);
   };
 
+  const createInterval = useCallback(
+    () =>
+      setInterval(
+        () =>
+          setCurrent((prevSlide) =>
+            prevSlide + 1 === SLIDES.length ? 0 : prevSlide + 1,
+          ),
+        8000,
+      ),
+    [],
+  );
+
   useEffect(() => {
+    auto.current = createInterval();
+
+    return () => {
+      if (auto.current) clearInterval(auto.current);
+    };
+  }, [createInterval]);
+
+  useEffect(() => {
+    if (auto.current) {
+      clearInterval(auto.current);
+      auto.current = createInterval();
+    }
+
     const directionName = direction ? "Left" : "Right";
     const exit = `animate-exit${directionName}`;
     const enter = `animate-enter${directionName}`;
@@ -69,15 +95,15 @@ function Carousel() {
     }, 2000);
 
     return () => clearTimeout(timeoutId);
-  }, [current, direction]);
+  }, [current, direction, createInterval]);
 
   return (
     <section className="h-screen w-screen overflow-hidden">
       <div className="relative h-full w-full overflow-hidden">
-        <div className="absolute left-20 top-[50%] z-30 flex select-none flex-col gap-2 overflow-hidden">
+        <div className="absolute left-10 top-[50%] z-30 flex select-none flex-col gap-2 overflow-hidden md:left-20">
           <h2
             ref={title}
-            className="pr-1 font-mono text-6xl font-black uppercase tracking-tighter text-zinc-100 drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.4)]"
+            className="pr-10 font-mono text-5xl font-black uppercase tracking-tighter text-zinc-100 drop-shadow-[0_1.2px_1.2px_rgba(0,0,0,0.6)] lg:text-6xl"
           >
             {currentSlide.title}
           </h2>
@@ -122,7 +148,9 @@ function Carousel() {
         >
           <Image
             src={currentSlide.src}
-            blurDataURL={bluredDataURLs[currentSlide.src.replace(".", "-blur.")]}
+            blurDataURL={
+              bluredDataURLs[currentSlide.src.replace(".", "-blur.")]
+            }
             placeholder="blur"
             alt="Slider Parallax"
             sizes="50vw"
@@ -131,7 +159,7 @@ function Carousel() {
             className="h-full w-auto origin-left scale-[125%] object-cover brightness-[45%]"
           />
         </div>
-        <ul className="absolute bottom-8 left-[50%] z-30 flex gap-1">
+        <ul className="absolute bottom-8 z-30 flex w-full justify-center gap-1">
           {Array.from({ length: SLIDES.length }, (_, i) => i).map((bullet) => {
             const color =
               current === bullet ? "bg-opacity-100" : "bg-opacity-30";

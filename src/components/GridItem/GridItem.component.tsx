@@ -20,7 +20,7 @@ function GridItem({ name, cover, coverWidth, coverHeight }: ItemProps) {
 
   return (
     // <li ref={item} className="w-[32%]">
-    <li className="w-[49%] lg:w-[32%]">
+    <li className="w-full md:w-[49%] lg:w-[32%]">
       <Link
         href={`/project/${name}`}
         className="group relative flex h-full w-full items-end justify-start overflow-hidden duration-700 after:block after:pb-[100%] after:content-[''] hover:bg-zinc-900/35"

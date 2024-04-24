@@ -22,13 +22,15 @@ export default function Home() {
       <div className="flex flex-col items-center justify-center gap-20 px-12 pt-20">
         <Grid />
         <Divider />
-        <section className="flex w-full gap-2">
+        <section className="flex w-full flex-col gap-2 md:flex-row">
           <Image
             src="/images/pexels-gdtography-911758.jpg"
-            blurDataURL={bluredDataURLs["/images/pexels-gdtography-911758-blur.jpg"]}
+            blurDataURL={
+              bluredDataURLs["/images/pexels-gdtography-911758-blur.jpg"]
+            }
             placeholder="blur"
             alt="Proyect 1"
-            className="h-auto w-1/2"
+            className="h-auto w-full md:w-1/2"
             width={6016}
             height={4016}
             sizes="50vw"
@@ -36,10 +38,12 @@ export default function Home() {
           />
           <Image
             src="/images/pexels-gdtography-911738.jpg"
-            blurDataURL={bluredDataURLs["/images/pexels-gdtography-911738-blur.jpg"]}
+            blurDataURL={
+              bluredDataURLs["/images/pexels-gdtography-911738-blur.jpg"]
+            }
             placeholder="blur"
             alt="Proyect 2"
-            className="h-auto w-1/2"
+            className="h-auto w-full md:w-1/2"
             width={6016}
             height={4016}
             sizes="50vw"
@@ -60,7 +64,9 @@ export default function Home() {
         </div>
         <Image
           src="/images/pexels-alex-staudinger-1732414.jpg"
-          blurDataURL={bluredDataURLs["/images/pexels-alex-staudinger-1732414-blur.jpg"]}
+          blurDataURL={
+            bluredDataURLs["/images/pexels-alex-staudinger-1732414-blur.jpg"]
+          }
           placeholder="blur"
           alt="Contact"
           fill
