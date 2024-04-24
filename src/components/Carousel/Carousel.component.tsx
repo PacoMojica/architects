@@ -1,7 +1,7 @@
 "use client";
 
 import { usePrevious } from "@/hooks";
-import { SLIDES } from "@/utils/constants";
+import { bluredDataURLs, SLIDES } from "@/utils/constants";
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
@@ -83,7 +83,7 @@ function Carousel() {
           </h2>
           <Link
             ref={callToAction}
-            className="animate-fromBottom block w-max border border-zinc-100 bg-zinc-100 px-5 py-2 text-center font-sans text-xs font-thin uppercase leading-tight tracking-tight text-zinc-700 duration-500 hover:bg-zinc-700 hover:bg-opacity-75 hover:text-zinc-100"
+            className="block w-max animate-fromBottom border border-zinc-100 bg-zinc-100 px-5 py-2 text-center font-sans text-xs font-thin uppercase leading-tight tracking-tight text-zinc-700 duration-500 hover:bg-zinc-700 hover:bg-opacity-75 hover:text-zinc-100"
             href={currentSlide.href}
           >
             {currentSlide.callToAction}
@@ -91,11 +91,11 @@ function Carousel() {
         </div>
         <div
           ref={first}
-          className="animate-panLeft absolute top-0 h-full w-full"
+          className="absolute top-0 h-full w-full animate-panLeft"
         >
           <Image
             src={firstSlide.src}
-            blurDataURL={firstSlide.src.replace(".", "-blur.")}
+            blurDataURL={bluredDataURLs[firstSlide.src.replace(".", "-blur.")]}
             placeholder="blur"
             alt="Slider 1"
             sizes="50vw"
@@ -107,7 +107,7 @@ function Carousel() {
         <div ref={second} className="absolute top-0 h-full w-full">
           <Image
             src={secondSlide.src}
-            blurDataURL={secondSlide.src.replace(".", "-blur.")}
+            blurDataURL={bluredDataURLs[secondSlide.src.replace(".", "-blur.")]}
             placeholder="blur"
             alt="Slider 2"
             sizes="50vw"
@@ -122,7 +122,7 @@ function Carousel() {
         >
           <Image
             src={currentSlide.src}
-            blurDataURL={currentSlide.src.replace(".", "-blur.")}
+            blurDataURL={bluredDataURLs[currentSlide.src.replace(".", "-blur.")]}
             placeholder="blur"
             alt="Slider Parallax"
             sizes="50vw"

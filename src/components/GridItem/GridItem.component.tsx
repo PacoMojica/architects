@@ -1,4 +1,5 @@
 // import { useTransition } from "@/hooks";
+import { bluredDataURLs } from "@/utils/constants";
 import Image from "next/image";
 import Link from "next/link";
 // import { useRef } from "react";
@@ -26,7 +27,7 @@ function GridItem({ name, cover, coverWidth, coverHeight }: ItemProps) {
       >
         <Image
           src={cover}
-          blurDataURL={cover.replace(".", "-blur.")}
+          blurDataURL={bluredDataURLs[cover.replace(".", "-blur.")]}
           placeholder="blur"
           alt={`cover-${name}`}
           className="absolute -z-10 h-full w-full object-cover brightness-90 duration-500 group-hover:scale-105 group-hover:brightness-100"

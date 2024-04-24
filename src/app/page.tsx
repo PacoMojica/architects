@@ -1,6 +1,7 @@
 import Carousel from "@/components/Carousel";
 import Divider from "@/components/Divider";
 import Grid from "@/components/Grid";
+import { bluredDataURLs } from "@/utils/constants";
 // import { useTransition } from "@/hooks";
 import Image from "next/image";
 import Link from "next/link";
@@ -24,7 +25,7 @@ export default function Home() {
         <section className="flex w-full gap-2">
           <Image
             src="/images/pexels-gdtography-911758.jpg"
-            blurDataURL="/images/pexels-gdtography-911758-blur.jpg"
+            blurDataURL={bluredDataURLs["/images/pexels-gdtography-911758-blur.jpg"]}
             placeholder="blur"
             alt="Proyect 1"
             className="h-auto w-1/2"
@@ -35,7 +36,7 @@ export default function Home() {
           />
           <Image
             src="/images/pexels-gdtography-911738.jpg"
-            blurDataURL="/images/pexels-gdtography-911738-blur.jpg"
+            blurDataURL={bluredDataURLs["/images/pexels-gdtography-911738-blur.jpg"]}
             placeholder="blur"
             alt="Proyect 2"
             className="h-auto w-1/2"
@@ -59,7 +60,7 @@ export default function Home() {
         </div>
         <Image
           src="/images/pexels-alex-staudinger-1732414.jpg"
-          blurDataURL="/images/pexels-alex-staudinger-1732414-blur.jpg"
+          blurDataURL={bluredDataURLs["/images/pexels-alex-staudinger-1732414-blur.jpg"]}
           placeholder="blur"
           alt="Contact"
           fill

@@ -1,6 +1,6 @@
 import Body from "@/components/Body";
 import Divider from "@/components/Divider";
-import { PROJECTS } from "@/utils/constants";
+import { bluredDataURLs, PROJECTS } from "@/utils/constants";
 import Image from "next/image";
 
 interface Params {
@@ -31,7 +31,7 @@ async function Page({ params }: PageProps) {
       <section className="relative h-screen w-screen">
         <Image
           src={project.cover}
-          blurDataURL={project.cover.replace(".", "-blur.")}
+          blurDataURL={bluredDataURLs[project.cover.replace(".", "-blur.")]}
           placeholder="blur"
           alt={`${name} cover`}
           width={project.coverWidth}
@@ -101,7 +101,7 @@ async function Page({ params }: PageProps) {
         <figure className="h-max w-full overflow-hidden">
           <Image
             src="/project/pexels-aleksandar-pasaric-1758672.jpg"
-            blurDataURL="/project/pexels-aleksandar-pasaric-1758672-blur.jpg"
+            blurDataURL={bluredDataURLs["/project/pexels-aleksandar-pasaric-1758672-blur.jpg"]}
             placeholder="blur"
             width={5967}
             height={3978}
@@ -163,7 +163,7 @@ async function Page({ params }: PageProps) {
             <figure className="h-full w-full overflow-hidden">
               <Image
                 src="/project/pexels-jean-van-der-meulen-1457844.jpg"
-                blurDataURL="/project/pexels-jean-van-der-meulen-1457844-blur.jpg"
+                blurDataURL={bluredDataURLs["/project/pexels-jean-van-der-meulen-1457844-blur.jpg"]}
                 placeholder="blur"
                 width={2912}
                 height={4368}
@@ -270,7 +270,7 @@ async function Page({ params }: PageProps) {
             <figure className="w-full overflow-hidden">
               <Image
                 src="/project/pexels-life-of-pix-14613.jpg"
-                blurDataURL="/project/pexels-life-of-pix-14613-blur.jpg"
+                blurDataURL={bluredDataURLs["/project/pexels-life-of-pix-14613-blur.jpg"]}
                 placeholder="blur"
                 width={4126}
                 height={2848}
@@ -288,7 +288,7 @@ async function Page({ params }: PageProps) {
             <figure className="w-full overflow-hidden">
               <Image
                 src="/project/pexels-igor-starkov-1117452.jpg"
-                blurDataURL="/project/pexels-igor-starkov-1117452-blur.jpg"
+                blurDataURL={bluredDataURLs["/project/pexels-igor-starkov-1117452-blur.jpg"]}
                 placeholder="blur"
                 width={3409}
                 height={2482}
@@ -306,7 +306,7 @@ async function Page({ params }: PageProps) {
         <figure className="h-max w-full overflow-hidden pt-8">
           <Image
             src="/project/pexels-pixabay-258160.jpg"
-            blurDataURL="/project/pexels-pixabay-258160-blur.jpg"
+            blurDataURL={bluredDataURLs["/project/pexels-pixabay-258160-blur.jpg"]}
             placeholder="blur"
             width={4608}
             height={3456}
@@ -363,7 +363,7 @@ async function Page({ params }: PageProps) {
             <figure className="h-full w-full overflow-hidden">
               <Image
                 src="/project/pexels-pixabay-210158.jpg"
-                blurDataURL="/project/pexels-pixabay-210158-blur.jpg"
+                blurDataURL={bluredDataURLs["/project/pexels-pixabay-210158-blur.jpg"]}
                 placeholder="blur"
                 width={5776}
                 height={3826}
@@ -380,7 +380,7 @@ async function Page({ params }: PageProps) {
         <figure className="h-max w-full overflow-hidden pt-8">
           <Image
             src="/project/pexels-photo-1633970.jpeg"
-            blurDataURL="/project/pexels-photo-1633970-blur.jpeg"
+            blurDataURL={bluredDataURLs["/project/pexels-photo-1633970-blur.jpeg"]}
             placeholder="blur"
             width={5797}
             height={3724}

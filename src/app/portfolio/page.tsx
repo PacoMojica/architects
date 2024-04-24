@@ -1,6 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
-import { PROJECT_COVERS } from "@/utils/constants";
+import { bluredDataURLs, PROJECT_COVERS } from "@/utils/constants";
 
 function Page() {
   return (
@@ -17,7 +17,7 @@ function Page() {
             >
               <Image
                 src={src}
-                blurDataURL={src.replace(".", "-blur.")}
+                blurDataURL={bluredDataURLs[src.replace(".", "-blur.")]}
                 placeholder="blur"
                 alt={src}
                 fill

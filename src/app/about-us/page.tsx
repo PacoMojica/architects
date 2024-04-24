@@ -1,7 +1,7 @@
 import Body from "@/components/Body";
 import Compare from "@/components/Compare";
 import Title from "@/components/Title";
-import { TEAM } from "@/utils/constants";
+import { bluredDataURLs, TEAM } from "@/utils/constants";
 import Image from "next/image";
 
 function Page() {
@@ -10,7 +10,7 @@ function Page() {
       <section className="relative h-screen w-screen">
         <Image
           src="/project/pexels-tirachard-kumtanom-347141.jpg"
-          blurDataURL="/project/pexels-tirachard-kumtanom-347141-blur.jpg"
+          blurDataURL={bluredDataURLs["/project/pexels-tirachard-kumtanom-347141-blur.jpg"]}
           placeholder="blur"
           alt="about us"
           sizes="50vw"
@@ -57,7 +57,7 @@ function Page() {
             <div className="h-full w-full">
               <Image
                 src="/project/pexels-binyamin-mellish-186077.jpg"
-                blurDataURL="/project/pexels-binyamin-mellish-186077-blur.jpg"
+                blurDataURL={bluredDataURLs["/project/pexels-binyamin-mellish-186077-blur.jpg"]}
                 placeholder="blur"
                 width={3352}
                 height={2286}
@@ -150,7 +150,7 @@ function Page() {
             <div className="h-full w-full">
               <Image
                 src="/project/pexels-expect-best-323772.jpg"
-                blurDataURL="/project/pexels-expect-best-323772-blur.jpg"
+                blurDataURL={bluredDataURLs["/project/pexels-expect-best-323772-blur.jpg"]}
                 placeholder="blur"
                 width={6000}
                 height={4000}
@@ -167,7 +167,7 @@ function Page() {
             <div className="h-full w-full">
               <Image
                 src="/project/pexels-pixabay-276724.jpg"
-                blurDataURL="/project/pexels-pixabay-276724-blur.jpg"
+                blurDataURL={bluredDataURLs["/project/pexels-pixabay-276724-blur.jpg"]}
                 placeholder="blur"
                 width={1920}
                 height={1080}
@@ -223,7 +223,7 @@ function Page() {
             >
               <Image
                 src={cover}
-                blurDataURL={cover.replace(".", "-blur.")}
+                blurDataURL={bluredDataURLs[cover.replace(".", "-blur.")]}
                 placeholder="blur"
                 alt={`cover-${name}`}
                 className="absolute -z-10 h-full w-full object-cover brightness-90 duration-500 group-hover:scale-105 group-hover:brightness-100"
